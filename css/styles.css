@@ -21,14 +21,20 @@ ul {
 }
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
+    
 }
-
 .container {
-        width: 1158px;
-        padding-left: 15px;
-        padding-right: 15px; 
+        /* width: 1158px; */
+        /* padding-left: 15px; */
+        /* padding-right: 15px;  */
+        max-width: 320px;
+        padding-left: 16px;
+        padding-right: 16px;
         margin: 0 auto;
         
+
         } 
     .header {
        
@@ -250,9 +256,12 @@ width: calc((100% - 72px) / 4);
 
 .team {
     background-color: #F4F4FD;
-    padding: 120px 0;
-    width: 1440px;
+    /* padding: 120px 0; */
+    padding-top: 96px;
+    padding-bottom: 96px;
+    /* width: 1440px; */
     margin: 0 auto;
+    
     
 }
 
@@ -261,7 +270,12 @@ margin-bottom: 72px;
 }
 .team-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+  width: 264px;
+ 
+
+    /* gap: 24px; */
+  gap: 72px;
     
 }
 .team-members {
@@ -269,13 +283,16 @@ margin-bottom: 72px;
 }
 .team-img {
     background: var(--WHITE, #FFF);
+    
 
   
 }
 .team-list-item {
    background-color: #FFFFFF;
    text-align: center;
-   width: calc((100% - 72px) / 4);
+   width: 100%;
+   /* width: calc((100% - 72px) / 4); */
+  
    border-radius: 0px 0px 4px 4px;
    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -324,13 +341,15 @@ height: 40px;
     margin-bottom: 72px;
 }
 .portfolio {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    /* padding-top: 120px; */
+    /* padding-bottom: 120px; */
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
+    /* column-gap: 24px; */
     row-gap: 48px;
 }
 .portfolio-content {
@@ -351,7 +370,8 @@ padding-top: 32px;
         
  }
  .portfolio-list-item {
-     width: calc((100% - 24px * 2) / 3);
+     /* width: calc((100% - 24px * 2) / 3); */
+     width: 100%;
      background: #FFF;
     border: 1px solid var(--CORNFLOWER, #E7E9FC);
     background: var(--WHITE, #FFF);
@@ -742,4 +762,31 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
  fill: #F4F4FD;
 }
 
+@media  screen and (min-width: 768px) {
+.container {
+max-width: 768px;
+}
+.portfolio-list {
+column-gap: 24px;
+row-gap: 72px;
+}
+.portfolio-list-item {
+ width: calc((100% - 24px) / 2);
+    }
+}
 
+@media screen and (min-width: 1158px) {
+.container {
+max-width: 1440px;
+ }
+.portfolio {
+padding-top: 120px;
+padding-bottom: 120px;
+}
+.portfolio-list {
+column-gap: 24px;
+    }
+.portfolio-list-item {
+width: calc((100% - 24px * 2) / 3);
+}
+}
